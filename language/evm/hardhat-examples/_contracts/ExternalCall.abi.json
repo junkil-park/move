@@ -1,0 +1,35 @@
+[
+{
+  "name": "callRevertWithMessage",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "contract"
+    },
+    {
+      "type": "string",
+      "name": "message"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "pure"
+},
+{
+  "name": "getFortyTwo",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "contract"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "uint64",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+}
+]

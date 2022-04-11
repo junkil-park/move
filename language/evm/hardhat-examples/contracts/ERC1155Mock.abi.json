@@ -1,0 +1,398 @@
+[
+{
+  "name": "ApprovalForAll",
+  "type": "event",
+  "inputs": [
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "account"
+    },
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "operator"
+    },
+    {
+      "type": "bool",
+      "indexed": false,
+      "name": "approved"
+    }
+  ],
+  "anonymous": false
+},
+{
+  "name": "TransferBatch",
+  "type": "event",
+  "inputs": [
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "operator"
+    },
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "from"
+    },
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "to"
+    },
+    {
+      "type": "uint256[]",
+      "indexed": false,
+      "name": "ids"
+    },
+    {
+      "type": "uint256[]",
+      "indexed": false,
+      "name": "values"
+    }
+  ],
+  "anonymous": false
+},
+{
+  "name": "TransferSingle",
+  "type": "event",
+  "inputs": [
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "operator"
+    },
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "from"
+    },
+    {
+      "type": "address",
+      "indexed": false,
+      "name": "to"
+    },
+    {
+      "type": "uint256",
+      "indexed": false,
+      "name": "id"
+    },
+    {
+      "type": "uint256",
+      "indexed": false,
+      "name": "value"
+    }
+  ],
+  "anonymous": false
+},
+{
+  "name": "URI",
+  "type": "event",
+  "inputs": [
+    {
+      "type": "uint8[]",
+      "indexed": false,
+      "name": "value"
+    },
+    {
+      "type": "uint256",
+      "indexed": false,
+      "name": "id"
+    }
+  ],
+  "anonymous": false
+},
+{
+  "name": "balanceOf",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "account"
+    },
+    {
+      "type": "uint256",
+      "name": "id"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "uint256",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+},
+{
+  "name": "balanceOfBatch",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address[]",
+      "name": "accounts"
+    },
+    {
+      "type": "uint256[]",
+      "name": "ids"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "uint256[]",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+},
+{
+  "name": "burn",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "owner"
+    },
+    {
+      "type": "uint256",
+      "name": "id"
+    },
+    {
+      "type": "uint256",
+      "name": "amount"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "owner",
+  "type": "function",
+  "inputs": [],
+  "outputs": [
+    {
+      "type": "address",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+},
+{
+  "name": "burnBatch",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "owner"
+    },
+    {
+      "type": "uint256[]",
+      "name": "ids"
+    },
+    {
+      "type": "uint256[]",
+      "name": "amounts"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "uri",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "uint256",
+      "name": "_id"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "string",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+},
+{
+  "name": "isApprovedForAll",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "account"
+    },
+    {
+      "type": "address",
+      "name": "operator"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "bool",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+},
+{
+  "name": "mint",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "to"
+    },
+    {
+      "type": "uint256",
+      "name": "id"
+    },
+    {
+      "type": "uint256",
+      "name": "amount"
+    },
+    {
+      "type": "bytes",
+      "name": "data"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "mintBatch",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "to"
+    },
+    {
+      "type": "uint256[]",
+      "name": "ids"
+    },
+    {
+      "type": "uint256[]",
+      "name": "amounts"
+    },
+    {
+      "type": "bytes",
+      "name": "data"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "safeBatchTransferFrom",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "from"
+    },
+    {
+      "type": "address",
+      "name": "to"
+    },
+    {
+      "type": "uint256[]",
+      "name": "ids"
+    },
+    {
+      "type": "uint256[]",
+      "name": "amounts"
+    },
+    {
+      "type": "bytes",
+      "name": "_data"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "safeTransferFrom",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "from"
+    },
+    {
+      "type": "address",
+      "name": "to"
+    },
+    {
+      "type": "uint256",
+      "name": "id"
+    },
+    {
+      "type": "uint256",
+      "name": "amount"
+    },
+    {
+      "type": "bytes",
+      "name": "_data"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "setApprovalForAll",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "address",
+      "name": "operator"
+    },
+    {
+      "type": "bool",
+      "name": "approved"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "setURI",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "string",
+      "name": "newuri"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+},
+{
+  "name": "supportsInterface",
+  "type": "function",
+  "inputs": [
+    {
+      "type": "bytes4",
+      "name": "interfaceId"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "bool",
+      "name": ""
+    }
+  ],
+  "stateMutability": "view"
+},
+{
+  "name": "constructor",
+  "type": "constructor",
+  "inputs": [
+    {
+      "type": "string",
+      "name": "uri"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+}
+]

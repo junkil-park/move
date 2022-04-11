@@ -87,8 +87,8 @@ module Evm::ERC721 {
     #[callable]
     /// Get the name.
     public fun tokenURI(tokenId: U256): String {
-        let baseURI = ASCII::string(x""); // TODO: Add a proper base URI.
-        tokenURI_with_baseURI(baseURI, tokenId)
+        let baseURI = b"";
+        ASCII::string(tokenURI_with_baseURI(baseURI, tokenId)) // TODO: Add a proper base URI.
     }
 
 

@@ -3,7 +3,6 @@
 /// This currently only represents a basic subset of what we may want to expose.
 module Evm::Evm {
     use Std::Vector;
-    use Std::ASCII::{String};
     use Std::Errors;
     use Evm::U256::{U256};
 
@@ -61,7 +60,10 @@ module Evm::Evm {
     // }
     // return (size > 0);
     // ```
-    public native fun isContract(addr: address): bool;
+    public fun isContract(_addr: address): bool {
+        // TODO: implement this.
+        true
+    }
 
     /// Define the unit (null or void) type.
     struct Unit {}
@@ -69,7 +71,10 @@ module Evm::Evm {
     /// Get tokenURI with base URI.
     // This is implemented in Solidity as follows:
     //   bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
-    public native fun tokenURI_with_baseURI(baseURI: String, tokenId: U256): String;
+    public fun tokenURI_with_baseURI(_baseURI: vector<u8>, _tokenId: U256): vector<u8> {
+        // TODO: implement this properly
+        b""
+    }
 
     /// Abort with an error message.
     public native fun abort_with(message: vector<u8>);
